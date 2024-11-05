@@ -18,27 +18,26 @@
                 - **More than One Zero**: Keep all elements in the output as zero, as any product with more than one zero will result in zero.
 
     - ### Example Walkthrough
+        Consider the input array `nums = [1, 2, 3, 4]`:
 
-    Consider the input array `nums = [1, 2, 3, 4]`:
+        1. **Count Zeros and Product Calculation**:
+            - `total_Product = 1 * 2 * 3 * 4 = 24`
+            - `count_Zeros = 0` (no zero elements)
 
-    1. **Count Zeros and Product Calculation**:
-        - `total_Product = 1 * 2 * 3 * 4 = 24`
-        - `count_Zeros = 0` (no zero elements)
+        2. **Build Output Array**:
+            - For each element in `nums`, divide `total_Product` by that element:
+                - `output[0] = 24 / 1 = 24`
+                - `output[1] = 24 / 2 = 12`
+                - `output[2] = 24 / 3 = 8`
+                - `output[3] = 24 / 4 = 6`
+            - Final output: `[24, 12, 8, 6]`
 
-    2. **Build Output Array**:
-        - For each element in `nums`, divide `total_Product` by that element:
-            - `output[0] = 24 / 1 = 24`
-            - `output[1] = 24 / 2 = 12`
-            - `output[2] = 24 / 3 = 8`
-            - `output[3] = 24 / 4 = 6`
-        - Final output: `[24, 12, 8, 6]`
-
-        Now, for an example with one zero:
-        - `nums = [1, 2, 0, 4]`
-            - `total_Product = 1 * 2 * 4 = 8` (ignoring zero)
-            - `count_Zeros = 1`
-        - Set `output[2]` (index of the zero) to `total_Product`, while all other elements remain zero.
-        - Final output: `[0, 0, 8, 0]`
+            Now, for an example with one zero:
+            - `nums = [1, 2, 0, 4]`
+                - `total_Product = 1 * 2 * 4 = 8` (ignoring zero)
+                - `count_Zeros = 1`
+            - Set `output[2]` (index of the zero) to `total_Product`, while all other elements remain zero.
+            - Final output: `[0, 0, 8, 0]`
 
     - ### Time Complexity
         - **Counting zeros and calculating total product**: O(n)
