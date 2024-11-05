@@ -1,4 +1,4 @@
-- ## Approach 1:- Using Nested Loops (Brute Force) 
+- ## Approach 1:- Brute Force (Time Limit Exceeded)
 
     - ### Problem Intuition:
         - Given an array `nums`, we are tasked with returning an array where each element at index `i` is the product of all elements in the array except `nums[i]`. The challenge is to do this without using division and while optimizing for time complexity.
